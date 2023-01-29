@@ -228,6 +228,16 @@ long int convert_size_number(long int num, int size);
 
 long int convert_size_unsgnd(unsigned long int num, int size);
 
+/**                                                                                                                                    
+ * struct code_format - Struct format                                                                                                  
+ * @sc: The specifiers                                                                                                                 
+ * @f: The function associated                                                                                                         
+ */                                                                                                                                    
+typedef struct code_format                                                                                                             
+{                                                                                                                                      
+                char *sc;                                                                                                              
+                        int (*f)(va_list);                                                                                             
+} code_f;  
 
 
 #endif /* MAIN_H */
